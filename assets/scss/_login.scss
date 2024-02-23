@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+//login
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    height: 100%;
+    padding-top: 60px;
+    box-sizing: border-box;
+    background: url(../images/bg_login.jpg)no-repeat center/cover;
+    .login-header {
+        .logo {
+            width: 420px;
+            height: 96px;
+            margin: 0 auto;
+        }
+        .desc {
+            margin-top: 100px;
+            font-weight: 500;
+            font-size: 32px;
+            text-align: center;
+            word-break: keep-all;
+            color: $color-white;
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1490px;
+        margin: 57px 0 92px;
+        padding: 0 25px;
+        box-sizing: border-box;
+        > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px;
+            border-radius: 12px;
+            box-sizing: border-box;
+        }
+        .login {
+            background: $color-white;
+            h2 {
+                font-weight: 700;
+                font-size: 36px;
+            }
+            .login-form {
+                width: 360px;
+                margin-top: 40px;
+                .input-group {
+                    flex-direction: column;
+                }
+                .input-item { 
+                    width: 100%;
+                    label {
+                        display: block;
+                        margin-bottom: 8px;
+                    }
+                    & + .input-item {
+                        margin-top: 20px;
+                    }
+                }
+                .login-btn {
+                    margin-top: 20px;
+                    .btn-default {
+                        width: 100%;
+                    }
+                    .btn-pw {
+                        display: block;
+                        margin-top: 20px;
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: $color-blue;
+                    }
+                }
+            }
+            .new-customer {
+                width: 100%;
+                margin-top: 40px;
+                padding-top: 40px;
+                font-weight: 700;
+                font-size: 24px;
+                text-align: center;
+                border-top: 1px solid $color-gray-05;
+                a {
+                    margin-left: 10px;
+                    text-decoration: underline;
+                    color: $color-blue;
+                }
+            }
+        }
+        .login-intro {
+            border: 1px solid $color-white;
+            h2 {
+                font-weight: 700;
+                font-size: 28px;
+                color: $color-white;
+                word-break: keep-all;
+            }
+            .intro-list {
+                display: flex;
+                gap: 16px;
+                margin-top: 68px;
+                li {
+                    p {
+                        margin-top: 20px;
+                        text-align: center;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: $color-white;
+                    }
+                }
+            }
+            .btn-intro {
+                width: 360px;
+                margin-top: 68px;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 10px;
+                    vertical-align: middle;
+                    background: url(../images/ico_link.svg) center/cover;    
+                }
+            }
+        }
+    }
+}
+
+/***** 반응형 *****/
+// 태블릿
+@media screen and (max-width: 1023px) {
+    .login-container {
+        .content {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+// 모바일
+@media screen and (max-width: 767px) {
+    .login-container {
+        .login-header {
+            padding: 0 25px;
+            .logo {
+                width: auto;
+                text-align: center;
+            }
+            .desc {
+                font-size: 24px;
+            }
+        }
+        .content {
+            > div {
+                flex: 1 1 100%;
+                padding: 30px;
+            }
+            .login {
+                .login-form {
+                    width: 100%;
+                }
+            }
+            .login-intro {
+                .intro-list {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    li {
+                        width: 186px;
+                    }
+                }
+                .btn-intro {
+                    width: 100%;
+                    padding: 0 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

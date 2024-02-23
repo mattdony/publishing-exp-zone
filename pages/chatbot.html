@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>강원대학교 데이터 라이브러리 | 나만의 AI 챗봇 만들기 체험</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="chatbot-container">
+      <div class="column-left">
+        <a href="./main.html" class="btn-back"><span class="blind">뒤로가기</span></a>
+        <h1 class="logo">
+          <img
+            src="../assets/images/logo_chatbot.svg"
+            alt="데이터 라이브러리 x 네이버 로고 이미지"
+          />
+        </h1>
+        <h2 class="main-title">나만의 AI 챗봇 만들기 체험</h2>
+        <div class="content">
+          <h3 class="head-title">참조 파일 선택하기</h3>
+          <div class="file-select">
+            <div class="input-radio">
+              <input type="radio" name="radio" id="radio01" checked="checked" />
+              <label for="radio01">선택안함</label>
+            </div>
+            <div class="input-radio">
+              <input type="radio" name="radio" id="radio02" />
+              <label for="radio02">Sample File 1</label>
+            </div>
+            <div class="input-radio">
+              <input type="radio" name="radio" id="radio03" />
+              <label for="radio03">Sample File 2</label>
+            </div>
+            <div class="input-radio">
+              <input type="radio" name="radio" id="radio04" />
+              <label for="radio04">filename.pdf</label>
+              <button class="btn-del"><span class="blind">파일 삭제</span></button>
+            </div>
+            <div class="file-item">
+              <label for="file" class="btn-file">파일 업로드</label>
+              <input type="file" id="file" />
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h3 class="head-title">파일 확인</h3>
+          <div class="file-preview">
+            <!-- [D] on클래스가 있을 경우 텍스트 보여짐 -->
+            <p class="txt on">
+              <span>파일 미리보기</span><br />
+              <br />
+              PDF 파일만 업로드 가능해요<br />
+              (파일 크기 최대 10MB)
+            </p>
+            <div class="preview-wrap">
+              <span class="file-name">filename</span>
+              <div class="table-wrap">
+                <table>
+                  <colgroup>
+                    <col width="120px" />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <th>페이지</th>
+                    <th>내용</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1-1</td>
+                      <td>1페이지 - 1번째 청크</td>
+                    </tr>
+                    <tr>
+                      <td>1-2</td>
+                      <td>1페이지 - 2번째 청크</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>2페이지</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>3페이지</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>3페이지</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>3페이지</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>3페이지</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>3페이지</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column-right">
+        <div class="btn-group">
+          <button class="btn-guide">이용 가이드</button>
+          <button class="btn-reset">대화 초기화</button>
+        </div>
+        <div class="content">
+          <div class="chatbot-window">
+            <p class="chat answer">
+              네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다.
+            </p>
+            <p class="chat question">
+              네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다.
+            </p>
+            <p class="chat answer">
+              네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다. 네이버
+              클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다. 네이버 클라우드의
+              초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다. 네이버 클라우드의 초거대
+              언어모델(LLM) HyperCLOVA X가 답변해드립니다. 네이버 클라우드의 초거대 언어모델(LLM)
+              HyperCLOVA X가 답변해드립니다. 네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가
+              답변해드립니다. 네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다.
+              네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다.
+            </p>
+            <p class="chat question">
+              네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다. 네이버
+              클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다. 네이버 클라우드의
+              초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다. 네이버 클라우드의 초거대
+              언어모델(LLM) HyperCLOVA X가 답변해드립니다. 네이버 클라우드의 초거대 언어모델(LLM)
+              HyperCLOVA X가 답변해드립니다. 네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가
+              답변해드립니다. 네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다.
+              네이버 클라우드의 초거대 언어모델(LLM) HyperCLOVA X가 답변해드립니다.
+            </p>
+          </div>
+          <div class="chatbot-input">
+            <div class="input-item">
+              <input
+                type="text"
+                placeholder="파일 내용에 대한 질문을 하거나 자유롭게 대화해보세요"
+              />
+            </div>
+            <button class="btn-send"><span class="blind">메세지 보내기</span></button>
+          </div>
+          <div class="notice">
+            <p class="info">
+              CLOVA X는 부정확하거나 불쾌감을 주는 정보를 제공할 수 있으며, 이는 NAVER의 입장을
+              대변하지 않습니다.
+            </p>
+            <span class="logo-clovax"
+              ><img src="../assets/images/logo_clovax.svg" alt="HyperCLOVAX 로고 이미지"
+            /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

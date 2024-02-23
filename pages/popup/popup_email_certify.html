@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강원대학교 데이터 라이브러리 | 인증번호 메일 발송 완료</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">인증번호 메일 발송 완료</h2>
+          <p class="desc">
+            입력하신 이메일로 인증번호가 발송되었습니다.<br />
+            수신하신 메일에서 인증번호 8자리를 확인하여 입력해주시기 바랍니다.
+          </p>
+          <div class="timer">인증유효시간<span class="time">04:59</span></div>
+          <div class="input-item input-certify">
+            <input
+              type="text"
+              name="certifyNum"
+              id="certifyNum"
+              maxlength="8"
+              placeholder="인증번호 8자리를 입력하세요."
+            />
+          </div>
+          <a href="#" class="btn-resend">인증 메일 재발송</a>
+          <div class="btn-group">
+            <button class="btn-line sm">취소</button>
+            <button class="btn-default sm">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

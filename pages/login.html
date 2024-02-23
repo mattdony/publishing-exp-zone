@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Claion | 로그인</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <h1 class="logo">
+          <img src="../assets/images/login_logo.svg" alt="KNU 강원대학교 데이터 라이브러리" />
+        </h1>
+        <p class="desc">
+          데이터 라이브러리에 오신 것을 환영합니다.<br />
+          생성형 AI 체험을 위해서는 사용자 로그인이 필요합니다.
+        </p>
+      </div>
+      <div class="content">
+        <div class="login">
+          <h2>데이터 라이브러리 로그인</h2>
+          <div class="login-form">
+            <div class="input-group">
+              <div class="input-item">
+                <label for="email">계정</label>
+                <input type="text" name="email" id="email" placeholder="Email" value="아이디입력" />
+              </div>
+              <div class="input-item">
+                <label for="pw">비밀번호</label>
+                <input
+                  type="password"
+                  name="pw"
+                  id="pw"
+                  placeholder="Password"
+                  value="비밀번호입력"
+                />
+              </div>
+            </div>
+            <div class="login-btn">
+              <button class="btn-default lg" onClick="location.href='./main.html'">로그인</button>
+              <a href="#" class="btn-pw">비밀번호를 잊으셨나요?</a>
+            </div>
+          </div>
+          <div class="new-customer">
+            <span>처음 방문하셨나요?</span>
+            <a href="./join.html">체험 계정 생성</a>
+          </div>
+        </div>
+        <div class="login-intro">
+          <h2>로그인 후 무엇을 체험할 수 있나요?</h2>
+          <ul class="intro-list">
+            <li>
+              <img
+                src="../assets/images/img_login_intro_01.png"
+                alt="AI 세계관 창작 체험 스토리네이션"
+              />
+              <p>AI 세계관 창작 체험<br />스토리네이션</p>
+            </li>
+            <li>
+              <img src="../assets/images/img_login_intro_02.png" alt="나만의 AI 챗봇 만들기 체험" />
+              <p>나만의 AI 챗봇<br />만들기 체험</p>
+            </li>
+            <li>
+              <img
+                src="../assets/images/img_login_intro_03.png"
+                alt="취향 맞춤 생성형 AI 캐릭터 인터렉션"
+              />
+              <p>취향 맞춤 생성형 AI<br />캐릭터 인터렉션</p>
+            </li>
+          </ul>
+          <button class="btn-default lg btn-intro">소개 홈페이지 둘러보기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>강원대학교 데이터 라이브러리 | 데이터 라이브러리 체험 시작하기</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="inner">
+        <a href="#" class="link-home">데이터 라이브러리 홈페이지</a>
+        <h1>
+          <a href="#" class="logo"
+            ><img src="../assets/images/logo.svg" alt="KNU 강원대학교 데이터 라이브러리"
+          /></a>
+        </h1>
+        <div class="user-menu">
+          <a href="#" class="link-account">
+            <button popovertarget="account_modify" style="color: white; font-weight: 600">
+              계정관리
+            </button>
+          </a>
+          <a href="./login.html" class="link-logout">로그아웃</a>
+        </div>
+      </div>
+    </header>
+    <main class="container" style="background-color: white">
+      <h2 class="title">데이터 라이브러리 체험 시작하기</h2>
+      <div class="content">
+        <div class="experience-wrap">
+          <div class="column">
+            <img
+              src="../assets/images/img_experience_01.png"
+              alt="AI 세계관 창작 체험 스토리네이션"
+            />
+            <div class="tit">AI 세계관 창작 체험<br />스토리네이션</div>
+            <p class="desc">
+              AI를 활용해 누구나 어렵지 않게<br />
+              글쓰기를 시작할 수 있어요.<br />
+              AI 보조작가와 함께<br />
+              세계관을 설정하고 스토리를 만들어가는<br />
+              세계관 공동창작 체험입니다.
+            </p>
+            <button class="btn-default lg">체험 시작하기</button>
+          </div>
+          <div class="column">
+            <img src="../assets/images/img_experience_02.png" alt="나만의 AI 챗봇 만들기 체험" />
+            <div class="tit">나만의 AI 챗봇<br />만들기 체험</div>
+            <p class="desc">
+              챗봇은 어떻게 만들어질까요?<br />
+              AI를 활용해 나의 데이터를 학습시켜<br />
+              나만의 정보로 만든<br />
+              나만의 챗봇을 만들어보고<br />
+              어떤 답변을 들려주는지 확인해보세요.
+            </p>
+            <button class="btn-default lg" onclick="location.href='./chatbot.html'">
+              체험 시작하기
+            </button>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="../assets/images/img_experience_03.png" alt="캐릭터 AI 인터렉션 체험" />
+              <div class="tit">캐릭터 AI 인터렉션 체험</div>
+              <p class="desc">
+                AI가 매핑해주는 취향맞춤 캐릭터와의 대화!<br />
+                *키오스크에서 바로 체험 가능합니다.
+              </p>
+            </div>
+            <div class="column">
+              <img
+                src="../assets/images/img_experience_04.png"
+                alt="AI 서비스 개발을 위한 네이버 CLOVA 체험 지원"
+              />
+              <p class="desc">AI 서비스 개발을 위한 네이버 CLOVA 체험 지원</p>
+              <button class="btn-line" popovertarget="account_apply">
+                연구자용 CLOVA Studio 계정 신청
+              </button>
+              <!-- [D] 계정신청 승인 대기중일 경우 -->
+              <!-- <button class="btn-line orange">체험 계정 승인 대기중</button> -->
+              <!-- [D] 계정신청 승인 완료(이용중)일 경우 -->
+              <!-- <button class="btn-line green">체험 계정 이용중</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Popup 연구자용계정신청 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="account_apply" popover style="z-index: -1">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">연구자용 CLOVA Studio 계정 신청</h2>
+          <p class="desc">
+            CLOVA Studio는 네이버의 초대규모 AI를 활용한 노코드 AI 서비스 개발도구입니다.<br />
+            <br />
+            데이터 라이브러리에서는 AI 연구 활동 지원을 위하여<br />
+            일정 기간 사용가능한 CLOVA Studio를 체험 계정을 생성해 드리고 있습니다.<br />
+            신청을 원하시면 아래 계정 정보 확인 후 신청 목적을 작성하여 제출해주시기 바랍니다.
+          </p>
+          <div class="account-form-wrap">
+            <div class="input-group flex-full">
+              <span class="input-label">이메일 계정</span>
+              <div class="input-item">
+                <input type="text" name="email" id="email" disabled value="abc@def.com" />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">이름</span>
+              <div class="input-item">
+                <input type="text" name="name" id="name" disabled value="김강원" />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">연락처</span>
+              <div class="input-item">
+                <input type="text" name="number" id="number" disabled value="010-1234-5678" />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">회원구분</span>
+              <div class="input-item">
+                <input
+                  type="text"
+                  name="customer"
+                  id="customer"
+                  disabled
+                  value="강원대학교 대학원생"
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">신청기간</span>
+              <select required>
+                <option value="2주" selected>2주</option>
+              </select>
+            </div>
+            <div class="input-group flex-full">
+              <span class="input-label">신청목적</span>
+              <textarea placeholder="CLOVA Studio 계정 신청 목적을 간략히 작성해주세요."></textarea>
+            </div>
+          </div>
+          <p class="info">
+            ※ 신청 후 관리자 승인이 필요합니다. 승인이 완료되면 계정 이메일로 접속 정보가
+            발송됩니다.
+          </p>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="account_apply">취소</button>
+            <button class="btn-default sm" popovertarget="account_apply_confirm">신청</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 연구자용계정신청-신청컨펌 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="account_apply_confirm" popover style="z-index: -2">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">신청 확인</h2>
+          <p class="desc">신청하시겠습니까?</p>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="account_apply_confirm">취소</button>
+            <button class="btn-default sm" popovertarget="account_apply_complete">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 연구자용계정신청-신청완료 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="account_apply_complete" popover style="z-index: -2">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">신청이 완료되었습니다.</h2>
+          <p class="desc">
+            관리자 승인이 완료되면 계정 이메일로 접속정보가 발송됩니다.<br />
+            운영 상황에 따라 처리에 시간이 소요될 수 있습니다.
+          </p>
+          <div class="btn-group">
+            <button class="btn-default sm" popovertarget="account_apply">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 계정정보 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="account_modify" popover style="z-index: -1">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">계정 관리</h2>
+          <div class="account-form-wrap">
+            <div class="input-group flex-full">
+              <span class="input-label">이메일 계정</span>
+              <div class="input-item">
+                <input type="text" name="email" id="email" disabled value="abc@def.com" />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">이름</span>
+              <div class="input-item">
+                <input type="text" name="name" id="name" disabled value="김강원" />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">연락처</span>
+              <div class="input-item">
+                <input type="text" name="number" id="number" value="010-1234-5678" />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">성별</span>
+              <div class="input-item">
+                <input type="text" name="gender" id="gender" value="남자" disabled />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">생년월일</span>
+              <div class="input-item">
+                <input
+                  type="text"
+                  name="birthDate"
+                  id="birthDate"
+                  maxlength="8"
+                  placeholder="yyyymmdd (8자리입력)"
+                  value="20020202"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">회원구분</span>
+              <select required>
+                <option value="학생" selected>학생</option>
+                <option value="연구자">연구자</option>
+                <option value="교수 및 교직원">교수 및 교직원</option>
+                <option value="일반">일반</option>
+              </select>
+            </div>
+            <button class="btn-line btn-pw-change sm" popovertarget="change_passwd">
+              비밀번호 변경
+            </button>
+          </div>
+          <button class="btn-account-delete">계정 탈퇴</button>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="account_modify">취소</button>
+            <button class="btn-default sm" popovertarget="account_modify_confirm">수정</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 계정정보-비밀번호변경 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="change_passwd" popover style="z-index: -2">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">비밀번호 변경</h2>
+          <div class="password-form-wrap">
+            <div class="input-group">
+              <span class="input-label">기존 비밀번호</span>
+              <div class="input-item">
+                <input type="password" name="password" id="password" />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">새 비밀번호</span>
+              <div class="input-item">
+                <input type="password" name="password" id="password" />
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-label">비밀번호 확인</span>
+              <div class="input-item">
+                <input type="password" name="password" id="password" />
+              </div>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="change_passwd">취소</button>
+            <button class="btn-default sm">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 계정정보-수정컨펌 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="account_modify_confirm" popover style="z-index: -2">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">계정 정보 수정</h2>
+          <p class="desc">수정하시겠습니까?</p>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="account_modify_confirm">취소</button>
+            <button class="btn-default sm" popovertarget="account_modify">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

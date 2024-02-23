@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+.popup-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    &.show {
+        display: block;
+    }
+    .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 480px;
+        width: fit-content;
+        max-height: 660px;
+        overflow-y: auto;
+        margin: 0 auto;
+        padding: 60px;
+        border-radius: 12px;
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.2);
+        background: $color-white;
+        .title {
+            font-weight: 700;
+            font-size: 24px;
+        }
+        .desc {
+            margin-top: 40px;
+            font-weight: 500;
+            font-size: 16px;
+            &.color-orange {
+                color: $color-orange;
+            }
+            &.color-green {
+                color: $color-green;
+            }
+        }
+        .btn-group {
+            width: 360px;
+            gap: 10px;
+            margin: 40px auto 0;
+        }
+        //이메일 인증 팝업
+        .timer {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 18px;
+            color: $color-gray-01;
+            .time {
+                font-weight: 700;
+                font-size: 24px;
+                color: $color-black;
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    margin: 0 8px;
+                    vertical-align: middle;
+                    background: url(../images/ico-timer.svg)no-repeat center/cover;
+                }
+            }
+        }
+        .input-certify {
+            margin-top: 20px;
+        }
+        .btn-resend {
+            display: block;
+            margin-top: 40px;
+            font-weight: 600;
+            font-size: 18px;
+            color: $color-blue;
+            text-decoration: underline;
+        }
+        // 계정 신청하기 팝업
+        .account-form-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 8px;
+            max-width: 640px;
+            width: 100%;
+            margin-top: 40px;
+            .input-group {
+                width: calc(50% - 4px);
+                .input-item, select {
+                    width: 100%;
+                }
+                &.flex-full {
+                    flex: 1 1 100%;
+                }
+            }
+            .btn-pw-change {
+                width: calc(50% - 4px);
+            }
+        }
+        .info {
+            margin-top: 40px;
+            font-weight: 500;
+            font-size: 16px;
+            color: $color-blue;
+        }
+        .btn-account-delete {
+            margin-top: 40px;
+            font-weight: 600;
+            font-size: 18px;
+            color: $color-blue;
+            text-decoration: underline;
+        }
+        // 비밀번호 변경 팝업
+        .password-form-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 480px;
+            margin-top: 40px;
+            .input-item {
+                flex: 1 1 100%;
+            }
+        }
+    }
+}
+
+/***** 반응형 *****/
+// 태블릿
+@media screen and (max-width: 1023px) {
+
+}
+// 모바일
+@media screen and (max-width: 767px) {
+    .popup-container {
+        .popup {
+            padding: 30px;
+        }
+    }
+}

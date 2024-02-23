@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강원대학교 데이터 라이브러리 | 연구자용 CLOVA Studio 계정 신청 조회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <!-- shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show">
+        <div class="popup">
+            <div class="content">
+                <h2 class="title">연구자용 CLOVA Studio 계정 신청 조회</h2>
+                <p class="desc color-orange">
+                    관리자 승인 대기중입니다.<br>
+                    승인이 완료되면 계정 이메일로 접속 정보가 발송됩니다.
+                </p>
+                <div class="account-form-wrap">
+                    <div class="input-group flex-full">
+                        <span class="input-label">이메일 계정</span>
+                        <div class="input-item">
+                            <input type="text" name="email" id="email" disabled value="abc@def.com">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-label">이름</span>
+                        <div class="input-item">
+                            <input type="text" name="name" id="name" disabled value="김강원">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-label">연락처</span>
+                        <div class="input-item">
+                            <input type="text" name="number" id="number" disabled value="010-1234-5678">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-label">회원구분</span>
+                        <div class="input-item">
+                            <input type="text" name="customer" id="customer" disabled value="강원대학교 대학원생">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-label">신청기간</span>
+                        <select required disabled>
+                            <option value="2주" selected>2주</option>
+                        </select>
+                    </div>
+                    <div class="input-group flex-full">
+                        <span class="input-label">신청목적</span>
+                        <textarea disabled placeholder="CLOVA Studio 계정 신청 목적을 간략히 작성해주세요.">OO학과 대학원생입니다. 연구를 위해 CLOVA Studio 계정을 신청합니다.</textarea>
+                    </div>
+                    <div class="input-group flex-full">
+                        <span class="input-label">신청일</span>
+                        <div class="input-item">
+                            <input type="text" name="date" id="date" disabled value="2024-03-01">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn-default sm">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

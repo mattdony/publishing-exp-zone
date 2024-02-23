@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>강원대학교 데이터 라이브러리 | 회원가입</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>
+        <a href="#" class="logo"
+          ><img src="../assets/images/logo.svg" alt="KNU 강원대학교 데이터 라이브러리"
+        /></a>
+      </h1>
+    </header>
+    <main class="container" style="background-color: white">
+      <h2 class="title">데이터 라이브러리 계정 가입</h2>
+      <p class="desc">
+        데이터 라이브러리 생성형 AI 체험을 위한 계정을 생성해주세요.<br />
+        계정은 데이터 라이브러리 내에서만 사용되며<br />
+        체험 편의를 위한 개인 데이터 저장 및 접속 통계 관리를 위해 필요합니다.
+      </p>
+      <div class="content join">
+        <div class="join-form-wrap">
+          <div class="input-group">
+            <span class="input-label">이메일 계정</span>
+            <div class="input-item">
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="본인 이메일 주소를 입력해주세요."
+              />
+              <p class="error-txt">이메일 양식이 잘못되었습니다.</p>
+            </div>
+            <button class="btn-line sm btn-email" popovertarget="email_certify">이메일 인증</button>
+          </div>
+          <div class="input-group">
+            <span class="input-label">비밀번호 설정</span>
+            <div class="input-item">
+              <input type="password" name="pw01" id="pw01" placeholder="비밀번호를 입력해주세요." />
+              <p class="error-txt">
+                숫자, 대소문자, 특수문자 중 최소 2가지 이상이 포함된 8자 이상의 비밀번호가
+                필요합니다.
+              </p>
+            </div>
+          </div>
+          <div class="input-group">
+            <span class="input-label">비밀번호 확인</span>
+            <div class="input-item">
+              <input
+                type="password"
+                name="pw02"
+                id="pw02"
+                placeholder="비밀번호를 한번 더 입력해주세요."
+              />
+              <p class="error-txt">비밀번호가 일치하지 않습니다.</p>
+            </div>
+          </div>
+          <div class="input-group">
+            <span class="input-label">이름</span>
+            <div class="input-item">
+              <input type="text" name="name" id="name" placeholder="이름을 입력해주세요." />
+              <p class="error-txt">필수 입력 항목입니다.</p>
+            </div>
+          </div>
+          <div class="input-group">
+            <span class="input-label">성별</span>
+            <div class="input-item">
+              <select required>
+                <option value="" disabled selected>선택</option>
+                <option value="남자">남자</option>
+                <option value="여자">여자</option>
+              </select>
+              <p class="error-txt">필수 선택 항목입니다.</p>
+            </div>
+            <span class="input-label">생년월일</span>
+            <div class="input-item">
+              <input
+                type="text"
+                name="birthDate"
+                id="birthDate"
+                maxlength="8"
+                placeholder="yyyymmdd (8자리입력)"
+              />
+              <p class="error-txt">필수 입력 항목입니다.</p>
+            </div>
+          </div>
+          <div class="input-group">
+            <span class="input-label">연락처</span>
+            <div class="input-item number-item">
+              <input type="text" value="010" disabled />
+              <input type="text" maxlength="4" value="1234" />
+              <input type="text" maxlength="4" value="5678" />
+              <p class="error-txt">
+                필수 입력 항목입니다. / 휴대전화 형식에 맞게 번호를 입력해주세요.
+              </p>
+            </div>
+          </div>
+          <div class="input-group">
+            <span class="input-label">회원 구분</span>
+            <div class="input-item radio-item">
+              <div class="input-radio">
+                <input type="radio" name="radio" id="radio01" />
+                <label for="radio01">학생</label>
+              </div>
+              <div class="input-radio">
+                <input type="radio" name="radio" id="radio02" />
+                <label for="radio02">연구자</label>
+              </div>
+              <div class="input-radio">
+                <input type="radio" name="radio" id="radio03" />
+                <label for="radio03">교수 및 교직원</label>
+              </div>
+              <div class="input-radio">
+                <input type="radio" name="radio" id="radio04" />
+                <label for="radio04">일반</label>
+              </div>
+              <p class="error-txt">필수 선택 항목입니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="agree-check">
+          <div class="input-item">
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <label for="checkbox">개인정보 수집 및 이용 동의</label>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button class="btn-line lg" onclick="location.href='./login.html'">취소</button>
+          <button class="btn-default lg">계정 가입</button>
+        </div>
+      </div>
+    </main>
+    <!-- Popup 인증메일 전송 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="email_certify" popover style="z-index: -1">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">인증번호 메일 발송 완료</h2>
+          <p class="desc">
+            입력하신 이메일로 인증번호가 발송되었습니다.<br />
+            수신하신 메일에서 인증번호 8자리를 확인하여 입력해주시기 바랍니다.
+          </p>
+          <div class="timer">인증유효시간<span class="time">04:59</span></div>
+          <div class="input-item input-certify">
+            <input
+              type="text"
+              name="certifyNum"
+              id="certifyNum"
+              maxlength="8"
+              placeholder="인증번호 8자리를 입력하세요."
+            />
+          </div>
+          <a href="#" class="btn-resend">인증 메일 재발송</a>
+          <div class="btn-group">
+            <!-- <button class="btn-line sm" onclick="location.href='./join.html'">취소</button> -->
+            <button class="btn-line sm" popovertarget="email_certify">취소</button>
+            <button class="btn-default sm">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
