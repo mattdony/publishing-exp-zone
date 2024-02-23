@@ -41,7 +41,9 @@
             </div>
             <div class="login-btn">
               <button class="btn-default lg" onClick="location.href='./main.html'">로그인</button>
-              <a href="#" class="btn-pw">비밀번호를 잊으셨나요?</a>
+              <a href="#" class="btn-pw">
+                <button popovertarget="passwd_reset">비밀번호를 잊으셨나요?</button>
+              </a>
             </div>
           </div>
           <div class="new-customer">
@@ -72,6 +74,56 @@
             </li>
           </ul>
           <button class="btn-default lg btn-intro">소개 홈페이지 둘러보기</button>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 비밀번호찾기 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="passwd_reset" popover style="z-index: -1">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">비밀번호 재설정</h2>
+          <div class="account-form-wrap">
+            <div class="input-group flex-full">
+              <span class="input-label">이메일 계정</span>
+              <div class="input-item">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="가입하신 이메일 계정을 입력해주세요."
+                />
+              </div>
+            </div>
+            <div class="input-group flex-full">
+              <span class="input-label">이름</span>
+              <div class="input-item">
+                <input type="text" name="name" id="name" placeholder="이름을 입력해주세요." />
+              </div>
+            </div>
+          </div>
+          <p class="info">
+            ※ 가입하신 이메일로 임시 비밀번호가 전송됩니다. 임시 비밀번호로 접속 후 재설정을
+            권장합니다.
+          </p>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="passwd_reset">취소</button>
+            <button class="btn-default sm" popovertarget="mismatch">재설정</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 비밀번호찾기 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="mismatch" popover style="z-index: -2">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">계정 정보가 일치하지 않습니다.</h2>
+          <p class="desc">
+            가입하신 계정 정보가 맞는지 확인해주세요.<br />
+            문제가 있는 경우 관리자 문의바랍니다.
+          </p>
+          <div class="btn-group">
+            <button class="btn-default sm" popovertarget="passwd_reset">확인</button>
+          </div>
         </div>
       </div>
     </div>

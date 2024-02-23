@@ -23,7 +23,11 @@
               계정관리
             </button>
           </a>
-          <a href="./login.html" class="link-logout">로그아웃</a>
+          <a href="#" class="link-logout">
+            <button popovertarget="popup_logout" style="color: white; font-weight: 600">
+              로그아웃
+            </button>
+          </a>
         </div>
       </div>
     </header>
@@ -87,6 +91,19 @@
         </div>
       </div>
     </main>
+    <!-- Popup 로그아웃 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="popup_logout" popover style="z-index: -1">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">로그아웃</h2>
+          <p class="desc">로그아웃 하시겠습니까?</p>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="popup_logout">취소</button>
+            <button class="btn-default sm" onclick="location.href='./login.html'">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Popup 연구자용계정신청 / shwo클래스 있을 경우 팝업 보여짐 -->
     <div class="popup-container show" id="account_apply" popover style="z-index: -1">
       <div class="popup">

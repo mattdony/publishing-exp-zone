@@ -11,7 +11,9 @@
   <body>
     <div class="chatbot-container">
       <div class="column-left">
-        <a href="./main.html" class="btn-back"><span class="blind">뒤로가기</span></a>
+        <a href="#" class="btn-back">
+          <span class="blind">뒤로가기</span>
+        </a>
         <h1 class="logo">
           <img
             src="../assets/images/logo_chatbot.svg"
@@ -110,7 +112,7 @@
       <div class="column-right">
         <div class="btn-group">
           <button class="btn-guide">이용 가이드</button>
-          <button class="btn-reset">대화 초기화</button>
+          <button class="btn-reset" popovertarget="chatbot_reset">대화 초기화</button>
         </div>
         <div class="content">
           <div class="chatbot-window">
@@ -156,6 +158,38 @@
             <span class="logo-clovax"
               ><img src="../assets/images/logo_clovax.svg" alt="HyperCLOVAX 로고 이미지"
             /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 챗봇나가기 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="chatbot_close" popover style="z-index: -1">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">페이지 나가기</h2>
+          <p class="desc">
+            페이지에서 나가면 작업 내용이 초기화됩니다.<br />
+            처음으로 돌아가시겠습니까?
+          </p>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="chatbot_close">취소</button>
+            <button class="btn-default sm" onclick="location.href='./main.html'">나가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup 대화내역초기화 / shwo클래스 있을 경우 팝업 보여짐 -->
+    <div class="popup-container show" id="chatbot_reset" popover style="z-index: -1">
+      <div class="popup">
+        <div class="content">
+          <h2 class="title">대화 초기화</h2>
+          <p class="desc">
+            대화가 초기화됩니다.<br />
+            업로드하신 파일은 유지됩니다.
+          </p>
+          <div class="btn-group">
+            <button class="btn-line sm" popovertarget="chatbot_reset">취소</button>
+            <button class="btn-default sm" popovertarget="chatbot_reset">초기화</button>
           </div>
         </div>
       </div>
